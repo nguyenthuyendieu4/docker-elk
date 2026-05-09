@@ -106,6 +106,7 @@ By default, the stack exposes the following ports:
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
+* 8220: Fleet Server HTTP (when started with `--profile=fleet`)
 
 > [!WARNING]
 > Elasticsearch's [bootstrap checks][bootstrap-checks] were purposely disabled to facilitate the setup of the Elastic
@@ -156,6 +157,12 @@ If everything went well and the setup completed without error, start the other s
 
 ```sh
 docker compose up
+```
+
+To also start Fleet Server with a compatible Elastic Agent version (`${ELASTIC_VERSION}`), enable the `fleet` profile:
+
+```sh
+docker compose --profile=fleet up
 ```
 
 > [!NOTE]
