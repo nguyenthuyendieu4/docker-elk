@@ -148,7 +148,7 @@ services:
         read_only: true
     environment:
       FLEET_SERVER_ENABLE: '1'
-      FLEET_SERVER_INSECURE_HTTP: '1'
+      FLEET_SERVER_INSECURE_HTTP: ${FLEET_SERVER_INSECURE_HTTP:-1}
       FLEET_SERVER_HOST: ${FLEET_SERVER_HOST:-0.0.0.0}
       FLEET_SERVER_POLICY_ID: fleet-server-policy
       # Fleet plugin in Kibana
