@@ -66,6 +66,7 @@ services:
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,Z
       - elasticsearch:/usr/share/elasticsearch/data:Z
+      - ./elasticsearch/x-pack-core-9.4.0.jar:/usr/share/elasticsearch/modules/x-pack-core/x-pack-core-9.4.0.jar:ro,Z
     ports:
       - 9200:9200
       - 9300:9300
