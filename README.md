@@ -165,6 +165,10 @@ To also start Fleet Server with a compatible Elastic Agent version (`${ELASTIC_V
 docker compose --profile=fleet up
 ```
 
+> [!WARNING]
+> The bundled Fleet Server profile is intended for local development. It uses insecure HTTP and binds to all interfaces.
+> For production environments, use TLS/HTTPS and restrict network exposure appropriately.
+
 > [!NOTE]
 > You can also run all services in the background (detached mode) by appending the `-d` flag to the above command.
 
