@@ -167,7 +167,8 @@ docker compose --profile=fleet up
 
 > [!WARNING]
 > The bundled Fleet Server profile is intended for local development. It uses insecure HTTP and binds to all interfaces.
-> For production environments, use TLS/HTTPS and restrict network exposure appropriately.
+> For production environments, use TLS/HTTPS and restrict network exposure appropriately (for example, set
+> `FLEET_SERVER_HOST=127.0.0.1` in `.env`).
 
 > [!NOTE]
 > You can also run all services in the background (detached mode) by appending the `-d` flag to the above command.
